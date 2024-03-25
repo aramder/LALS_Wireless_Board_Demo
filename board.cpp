@@ -47,9 +47,11 @@ uint16_t get_CAN_addr(void) {
     selected_can_addr += 1;
   if (digitalRead(CAN_ADDR2_PIN))
     selected_can_addr += 2;
-  if (digitalRead(CAN_ADDR3_PIN))
-    selected_can_addr += 4;
-  if (digitalRead(CAN_ADDR4_PIN))
-    selected_can_addr += 8;
+  // Using this switch to do wireless test portion
+  // if (digitalRead(CAN_ADDR3_PIN))
+  //   selected_can_addr += 4;
+  // Using this switch to do simple board board test portion
+  // if (digitalRead(CAN_ADDR4_PIN))
+  //   selected_can_addr += 8;
   return selected_can_addr;
 }
